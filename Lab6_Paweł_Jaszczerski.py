@@ -2,6 +2,8 @@ import numpy as np
 import time
 import matplotlib.pyplot as plt
 
+#bleble
+
 #1
 #a
 def kwadraty1(x):
