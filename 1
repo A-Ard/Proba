@@ -1,0 +1,30 @@
+import os
+from Lab5.modul import *
+import sys
+
+try:
+   print(konwersja(sys.argv[1].upper()))
+except:
+    adres_pliku = 'Lab5/modul.py'
+    #a
+    w = os.listdir()
+    print(w)
+    #b
+    try:
+        os.mkdir('Lab5')
+    except:
+        pass
+    #c
+
+    docelowy=open(adres_pliku, 'w')
+    with open('Konwersja.py', 'r') as zrodlowy:
+        f=zrodlowy.readlines()
+        for linia in f:
+            docelowy.write(linia)
+    docelowy.close()
+
+    #d
+    open('Lab5/__init__.py', 'a').close()
+    #e
+    print(konwersja('X'))
+    #g
